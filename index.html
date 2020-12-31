@@ -7,19 +7,112 @@
     <title>Web shop landing page</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400&family=Lora:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
+    <nav class="responsive-navigation">
+        <a href="#" class="close-menu">
+            <svg class="icon icon-menu"><use xlink:href="/img/sprite.svg#icon-cross"></use></svg>
+        </a>
 
-        <footer class="footer">
-            <p>Developed by Taofeeq Adewuyi</p>
-        </footer>
-    </div>
+        <ul class="responsive-navigation__items">
+            <!-- <li class="responsive-navigation__item">
+                <svg class="icon icon-menu"><use xlink:href="/img/sprite.svg#icon-menu"></use></svg>
+            </li> -->
+            <li class="responsive-navigation__item">
+                <a href="#" class=" responsive-navigation__link ">Home</a>
+            </li>
+            <li class="responsive-navigation__item ">
+                <a href="#" class="responsive-navigation__link ">Collection</a>
+            </li>
+            <li class="responsive-navigation__item ">
+                <a href="#" class="responsive-navigation__link "> About</a>
+            </li>
+            <li class="responsive-navigation__item ">
+                <a href="#" class="responsive-navigation__link ">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="logo">
+            interior
+        </div>
+        <nav class="navigtion">
+            <ul class="navigation__items">
+                <li class="navigation__item">
+                    <a href="#" class="open-menu">
+                        <svg class="icon icon-menu"><use xlink:href="/img/sprite.svg#icon-menu"></use></svg>
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class=" navigation__link ">Home</a>
+                </li>
+                <li class="navigation__item ">
+                    <a href="#" class="navigation__link ">Collection</a>
+                </li>
+                <li class="navigation__item ">
+                    <a href="#" class="navigation__link "> About</a>
+                </li>
+                <li class="navigation__item ">
+                    <a href="#" class="navigation__link ">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__description">
+                <h1>Modern interior</h1>
+                <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+                <p><a href="#" class="inline-button"> Read more </a> <span>&rarr;</span></p>
+
+            </div>
+            <div class="hero__interior">
+                <div class="hero__figure">
+                    <img src="/img/photo1.png" alt="hero image" class="hero__image">
+                </div>
+                <div class="contact">
+                    <div class="contact__detail">
+                        <figure class="contact__image">
+                            <img src="/img/photo2.png" alt="user">
+                        </figure>
+                        <div class="contact__profile">
+                            <p class="contact__profile--name">Aliza Webber</p>
+                            <p class="contact__profile--role">Interior designer</p>
+                        </div>
+                    </div>
+                    <div class="contact__date">
+                        Designed in 2020 by Aliza Webber
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class=" footer ">
+        <p>Taofeeq @ DevChallenges.io</p>
+    </footer>
 
     <script>
+        let responsiveNavigation = document.querySelector('.responsive-navigation');
+        let openMenu = document.querySelector('.open-menu');
+        let closeMenu = document.querySelector('.close-menu')
+        openMenu.addEventListener("click", displayResponsiveMenu);
+        closeMenu.addEventListener("click", closeResponsiveMenu);
+
+        function displayResponsiveMenu(event) {
+            event.preventDefault();
+            console.log("event")
+            responsiveNavigation.style.height = "100%";
+
+        }
+
+        function closeResponsiveMenu(event) {
+            event.preventDefault();
+            responsiveNavigation.style.height = "0px";
+        }
     </script>
 </body>
 
