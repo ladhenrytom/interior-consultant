@@ -1,11 +1,3 @@
-/*
-$breakpoint arguement chocies:
--phone <= 600px
--tab-port   <= 900px
--tab-land <= 1200px
--big-desk >= 1800px
-    ORDER: Base + Typography > general layout + grid > page layout > components
-*/
 :root {
   --color-bg-1: #EE797A;
   --color-bg-2: #F08460;
@@ -97,7 +89,7 @@ header {
 main {
   flex: 0 0 100%;
   padding: 0px 5rem;
-  margin: 5rem 0px; }
+  margin: 10rem 0px; }
   @media only screen and (max-width: 58em) {
     main {
       padding: 0px 2rem; } }
@@ -137,15 +129,15 @@ main {
       .hero__description {
         padding: 0px 0px; } }
     .hero__description h1 {
-      font-size: 4rem;
       font-family: var(--font-logo);
-      font-weight: 400; }
+      font-size: 5rem;
+      font-weight: 500; }
       @media only screen and (max-width: 67.9em) {
         .hero__description h1 {
           font-size: 3.5rem; } }
       @media only screen and (max-width: 54em) {
         .hero__description h1 {
-          font-size: 2.5rem; } }
+          font-size: 3rem; } }
     .hero__description p {
       font-size: 2rem;
       line-height: 3rem; }

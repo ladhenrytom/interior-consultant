@@ -1,41 +1,3 @@
-/*
-$breakpoint arguement chocies:
--phone <= 600px
--tab-port   <= 900px
--tab-land <= 1200px
--big-desk >= 1800px
-    ORDER: Base + Typography > general layout + grid > page layout > components
-*/
-
-//1em = 16px
-@mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) {
-            @content;
-        } //600px/16px
-    }
-    @if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em) {
-            @content;
-        } //900px/16px
-    }
-    @if $breakpoint==labtop {
-        @media only screen and (max-width: 64em) {
-            @content;
-        } //800px/16px
-    }
-    @if $breakpoint==tab-land {
-        @media only screen and (max-width: 75em) {
-            @content;
-        } //1200px/16px
-    }
-    @if $breakpoint==big-desk {
-        @media (min-width: 112.5em) {
-            @content;
-        } //1800px/16px
-    }
-}
-
 :root {
     --color-bg-1: #EE797A;
     --color-bg-2: #F08460;
@@ -154,7 +116,7 @@ main {
         padding: 0px 2rem;
     }
     // height: calc(100vh -20rem);
-    margin: 5rem 0px;
+    margin: 10rem 0px;
     // height: 40rem;
 }
 
@@ -194,15 +156,15 @@ main {
             padding: 0px 0px;
         }
         h1 {
-            font-size: 4rem;
+            font-family: var(--font-logo);
+            font-size: 5rem;
+            font-weight: 500;
             @media only screen and (max-width: 67.9em) {
                 font-size: 3.5rem;
             }
             @media only screen and (max-width: 54em) {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
-            font-family: var(--font-logo);
-            font-weight: 400;
             // line-height: 1rem;
         }
         p {
